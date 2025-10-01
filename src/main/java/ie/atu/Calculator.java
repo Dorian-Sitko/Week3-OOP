@@ -5,4 +5,8 @@ public class Calculator {
     {
         return firstNum + secondNum;
     }//Adding two numbers
+    public int sub(int firstNum,int secondNum)
+    {
+        return firstNum - secondNum;
+    }//Subtracting two numbers
 }
