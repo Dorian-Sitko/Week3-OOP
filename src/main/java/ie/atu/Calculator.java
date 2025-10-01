@@ -9,4 +9,8 @@ public class Calculator {
     {
         return firstNum - secondNum;
     }//Subtracting two numbers
+    public int mult(int firstNum,int secondNum)
+    {
+        return firstNum * secondNum;
+    }//Multiply two numbers
 }
