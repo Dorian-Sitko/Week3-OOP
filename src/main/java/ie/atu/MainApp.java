@@ -35,7 +35,16 @@ public class MainApp {
             }
             case "div" ->
             {
-                yield  calc.div(firstNum,secondNum);
+                if ( secondNum==0)
+                {
+                    System.out.println("Invalid operation.");
+                    yield 0;
+                }
+                else
+                {
+                    yield  calc.div(firstNum,secondNum);
+                }
+
             }
             default ->
             {
