@@ -10,14 +10,34 @@ public class MainApp {
         //create an instance of Calculator
         Calculator calc= new Calculator();
 
-        System.out.println("Simple Calculator- Add Two Numbers");
+
         System.out.println("Enter first number:");
         int firstNum= sc.nextInt();
         System.out.println("Enter second number:");
         int secondNum= sc.nextInt();
-        int result = calc.add(firstNum,secondNum);
-        System.out.println("Result:"+result);
 
+
+        System.out.println("Pick a operation, add or sub");
+        String operation = sc.next();
+
+        double result =switch (operation)
+        {
+            case "add" ->
+            {
+                yield  calc.add(firstNum,secondNum);
+            }
+            case "sub" ->
+            {
+                yield  calc.sub(firstNum,secondNum);
+            }
+            default ->
+            {
+                System.out.println("Invalid operation.");
+                yield 0;
+            }
+
+        };
+        System.out.println("The sum of the results is: "+result);
         sc.close();
 
     }
