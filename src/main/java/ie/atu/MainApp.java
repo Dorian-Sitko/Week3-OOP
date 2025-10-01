@@ -17,14 +17,13 @@ public class MainApp {
         int secondNum= sc.nextInt();
 
 
-        System.out.println("Pick a operation, add, sub or mult");
+        System.out.println("Pick a operation, add, sub, mult or div");
         String operation = sc.next();
 
         double result =switch (operation)
         {
             case "add" ->
-            {
-                yield  calc.add(firstNum,secondNum);
+            {   yield  calc.add(firstNum,secondNum);
             }
             case "sub" ->
             {
@@ -33,6 +32,10 @@ public class MainApp {
             case "mult" ->
             {
                 yield  calc.mult(firstNum,secondNum);
+            }
+            case "div" ->
+            {
+                yield  calc.div(firstNum,secondNum);
             }
             default ->
             {
