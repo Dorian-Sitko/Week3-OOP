@@ -17,7 +17,7 @@ public class MainApp {
         int secondNum= sc.nextInt();
 
 
-        System.out.println("Pick a operation, add or sub");
+        System.out.println("Pick a operation, add, sub or mult");
         String operation = sc.next();
 
         double result =switch (operation)
@@ -29,6 +29,10 @@ public class MainApp {
             case "sub" ->
             {
                 yield  calc.sub(firstNum,secondNum);
+            }
+            case "mult" ->
+            {
+                yield  calc.mult(firstNum,secondNum);
             }
             default ->
             {
